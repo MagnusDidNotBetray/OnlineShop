@@ -1,0 +1,199 @@
+@import '_fonts';
+@import 'section/_intro';
+
+.sign{
+    width: 100%;
+    margin-bottom: 120px;
+    font-family: "Montserrat", sans-serif;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1170px;
+        width: 87vw;
+        margin: 0 auto;
+    }
+    &__item{
+        width: calc(50% - 30px);
+    }
+    &__line{
+        width: 1px;
+        background-color: #eeeeee;
+    }
+    &__title{
+        margin-bottom: 45px;
+    }
+    &__input-wrapper{
+        margin-bottom: 35px;
+    }
+    &__button{
+        margin-right: 45px;
+        flex-shrink: 0;
+    }
+    &__button-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    &__button-descr{
+        max-width: 220px;
+        font-family: "Roboto", sans-serif;
+        font-size: .9375rem;
+        color: #8e8c8c;
+        text-align: right;
+    }
+    &__checkbox-label{
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        font-family: "Roboto", sans-serif;
+        font-size: .9375rem;
+        color: #8e8c8c;
+    }
+    &__checkbox{
+        margin-right: 15px;
+    }
+}
+.sign-title{
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #575153;
+    text-transform: uppercase;
+}
+.input-wrapper{
+    position: relative;
+    &__visibility-button{
+        position: absolute;
+        top: 8px; right: 10px;
+        width: 25px;
+        height: 25px;
+        background-image: url(../images/signUp/hide.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px;
+        cursor: pointer;
+        &--active{
+            background-image: url(../images/signUp/eye.svg);
+        }
+    }
+    &__error-message{
+        display: none;
+        margin-top: 10px;
+        font-family: "Roboto", sans-serif;
+        font-size: .8125rem;
+        color: #cb2431;
+        &--active{
+            display: block;
+        }
+    }
+}
+.sign-input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e7e7e7;
+    font-size: .9375rem;
+    color: #989898;
+    &--error{
+        border-color: #bb5465;
+        background-color: #fcf6f7;
+    }
+    &--padding-right{
+        padding-right: 45px;
+    }
+    &:placeholder-shown{
+        font-size: .9375rem;
+        color: #989898;
+    }
+}
+.sign-button{
+    padding: 20px 30px;
+    border: 2px solid #737373;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #454647;
+    text-transform: uppercase;
+    transition: background-color 300ms, color 300ms;
+    cursor: pointer;
+    &:hover{
+        border-color: #00c8c8;
+        background-color: #00c8c8;
+        color: #ffffff;
+    }
+}
+.sign-link{
+    font-family: "Roboto", sans-serif;
+    font-size: .9375rem;
+    color: #00c8c8;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.checkbox{
+    width: 25px;
+    height: 25px;
+    border: 1px solid #e7e7e7;
+    cursor: pointer;
+    &[data-checked="true"]{
+        background-image: url(../images/signUp/check.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 15px;
+    }
+}
+@media (max-width: 1200px){
+    .sign-button{
+        padding: 15px 20px;
+        text-overflow: ellipsis;
+    }
+}
+@media (max-width: 1135px){
+    .sign__item{
+        width: calc(50% - 25px);
+    }
+    .sign__button-descr{
+        max-width: unset;
+        margin-top: 15px;
+        text-align: left;
+    }
+}
+@media (max-width: 800px){
+    .sign__inner{
+        width: 90vw;
+    }
+}
+@media (max-width: 800px){
+    .sign__inner{
+        display: block;
+    }
+    .sign__line{
+        display: none;
+    }
+    .sign__item{
+        max-width: 560px;
+        width: 100%;
+        &:not(:last-child){
+            margin-bottom: 45px;
+        }
+    }
+    .sign__button-descr{
+        max-width: 220px;
+        margin-top: 0;
+        text-align: right;
+    }
+    .sign__title{
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 514px){
+    .sign__button-descr{
+        max-width: unset;
+        margin-top: 15px;
+        text-align: left;
+    }
+}
+@media (max-width: 351px){
+    .sign__password-link{
+        margin-top: 15px;
+    }
+}

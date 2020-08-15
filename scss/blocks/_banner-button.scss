@@ -1,0 +1,17 @@
+.banner-button{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 180px;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    border: 2px solid #727272;
+    font-size: 1rem;
+    color: #727272;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+        background-color: #70c7c7;
+        border-color: #70c7c7;
+        color: #ffffff;
+    }
+}

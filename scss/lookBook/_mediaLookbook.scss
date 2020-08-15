@@ -1,0 +1,192 @@
+@media (max-width: 1650px){
+    .lookbook-content{
+        &__banner-title--banner-win{
+            top: 30%;
+            font-size: $px140;
+        }
+        &__banner-subtitle--banner-win{
+            font-size: $px52;
+        }
+    }
+}
+@media (max-width: 1560px){
+    .lookbook-content{
+        &__win-inner{
+            padding-top: 20px;
+        }
+        &__banner-title--banner-win{
+            font-size: 6.25rem;
+        }
+    }
+}
+@media (max-width: 1380px){
+    .lookbook-content{
+        &__janes-inner{
+            padding-top: 40px;
+        }
+        &__img-win{
+            right: 10px;
+        }
+        &__banner-title--banner-win{
+            display: none;
+        }
+        &__banner-title{
+            font-size: $px36;
+            margin-bottom: 20px;
+        }
+        &__banner-button{
+            padding: 15px 25px;
+        }
+    }
+}
+@media (max-width: 1260px){
+    .lookbook-content{
+        &__banner-win{
+            .lookbook-content__banner-text{
+                font-size: 0.875rem;
+                max-width: 600px;
+            }
+        }
+    }
+}
+@media (max-width: 1180px){
+    .lookbook-content{
+        &__banner-janes{
+            width: 65.6%;
+            padding: 19.57% 0;
+            order: -1;
+        }
+        &__banner-win{
+            width: 100%;
+            order: 1;
+            padding: 18% 0;
+            margin-bottom: 0;
+        }
+        &__img-win{
+            right: 5%;
+        }
+        &__item{
+            width: 31.5%;
+            padding: 19.57% 0;
+        }
+    }
+}
+@media (max-width: 966px){
+    .banner-win__text-wrapper{
+        display: none;
+        &.banner-win__text-wrapper--active{
+            display: block;
+        }
+    }
+    .banner-win__text-wrapper--active{
+        box-sizing: border-box;
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        padding: 15px 10px;
+        background-color: #f8f8f8;
+    }
+}
+@media (max-width: 850px){
+    .lookbook{
+        margin-top: 60px;
+        &-content__banner-win{
+            .lookbook-content__banner-subtitle{
+                max-width: 70%;
+            }
+        }
+        &-content__banner-janes{
+            .lookbook-content__banner-title{
+                font-size: $px30;
+            }
+        }
+        &-content__janes-inner{
+            padding-top: 16px;
+        }
+    }
+}
+@media (max-width: 768px){
+    .lookbook-content{
+        &__banner-janes{
+            width: 100%;
+            padding: 18% 0;
+        }
+    }
+    .banner-janes__text-wrapper{
+        display: none;
+        &.banner-janes__text-wrapper--active{
+            display: block;
+        }
+    }
+    .banner-janes__text-wrapper--active{
+        box-sizing: border-box;
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        padding: 15px 10px;
+        background-color: #f8f8f8;
+    }
+}
+@media (max-width: 715px){
+    .lookbook-content{
+        &__item-inner{
+            width: 105px;
+            a{
+                width: 35px;
+                height: 35px;
+                font-size: $px22;
+            }
+        }
+    }
+}
+@media (max-width: 572px){
+    .lookbook-content{
+        &__banner-win,
+        &__banner-janes{
+            .lookbook-content__banner-title{
+                max-width: 50%;
+                font-size: $px20;
+            }
+        }
+    }
+}
+@media (max-width: 550px){
+    .lookbook-content{
+        &__item{
+            width: 47%;
+            padding: 31.33% 0;
+        }
+        &__banner-win{
+            margin-bottom: 0;
+        }
+        &__item-inner{
+            width: 125px;
+            a{
+                width: 45px;
+                height: 45px;
+                font-size: $px30;
+            }
+        }
+    }
+}
+@media (max-width: 460px){
+    .lookbook-content{
+        &__banner-win,
+        &__banner-janes{
+            padding: 25% 0;
+            .lookbook-content__banner-subtitle{
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
+@media (max-width: 450px){
+    .lookbook-content{
+        &__item-inner{
+            width: 105px;
+            a{
+                width: 35px;
+                height: 35px;
+                font-size: $px22;
+            }
+        }
+    }
+}

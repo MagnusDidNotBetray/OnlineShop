@@ -1,0 +1,147 @@
+@import "_varsLookbook";
+@import "../_fonts";
+@import "../blocks/_sort-by";
+@import "../blocks/_banner-text";
+@import "../blocks/_banner-button";
+@import "../section/_choice-lookbook";
+@import "../section/_intro";
+body{
+    font-size: 16px;
+}
+.lookbook{
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 60px;
+    &__inner{
+        padding-bottom: 30px;
+        border: 1px solid #ededed;
+        border-left: none;
+        border-right: none;
+    }
+}
+.lookbook-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__banner-janes{
+        box-sizing: border-box;
+        position: relative;
+        max-width: 870px;
+        width: 49%;
+        padding: 14.6% 0;
+        margin-bottom: 30px;
+        background-color: #e2e3e5;
+    }
+    &__img-janes{
+        position: absolute;
+        top: 0; right: 2%;
+        height: 99.95%;
+    }
+    &__janes-inner{
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        padding: 60px 0 15px 15px;
+    }
+    &__banner-title{
+        text-transform: uppercase;
+        font-size: $px48;
+        font-weight: 300;
+        color: #575153;
+        margin-bottom: 30px;
+        span{
+            font-weight: 700;
+        }
+    }
+    &__banner-subtitle{
+        text-transform: uppercase;
+        font-size: $px13;
+        color: #727272;
+        margin-bottom: 20px;
+    }
+
+    &__banner-text{
+        margin-bottom: 30px;
+    }
+    &__banner-win{
+        box-sizing: border-box;
+        position: relative;
+        max-width: 1325px;
+        width: 75%;
+        padding: 14.6% 0;
+        margin-bottom: 30px;
+        background: linear-gradient(#efefed, #f6f6f6);
+        .lookbook-content__banner-text{
+            max-width: 500px;
+        }
+    }
+    &__img-win{
+        position: absolute;
+        top: 0; right: 30%;
+        height: 99.95%;
+    }
+    &__win-inner{
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        padding: 60px 15px 15px;
+    }
+    &__banner-title--banner-win{
+        position: absolute;
+        right: 15px; top: 20%;
+        font-size: $px200;
+        font-weight: 700;
+        color: #70c7c7;
+        text-transform: uppercase;
+        text-align: right;
+    }
+    &__banner-subtitle--banner-win{
+        font-size: $px72;
+    }
+    &__item{
+        box-sizing: border-box;
+        position: relative;
+        width: 23.5%;
+        padding: 14.6% 0;
+        min-width: 139px;
+        min-height: 185.33px;
+        margin-bottom: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: .3s;
+        &:hover{
+            box-shadow: 0 0 24px rgba($color: #000000, $alpha: 0.24);
+            .lookbook-content__item-inner{
+                z-index: 5;
+            }
+        }
+        &-inner{
+            display: flex;
+            position: absolute;
+            z-index: -10; left: 0; right: 0;
+            top: 60%; 
+            width: 125px;
+            margin: 0 auto;
+            justify-content: space-between;
+            transition: all .4s;
+            a{
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: #ffffff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #000000;
+                font-size: $px30;
+                text-decoration: none;
+                transition: .35;
+                box-shadow: 2px 2px 23px 16px rgba($color: #000000, $alpha: .13);
+                &:hover{
+                    background-color: #000000;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+@import "_mediaLookbook";

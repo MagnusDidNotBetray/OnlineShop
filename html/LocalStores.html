@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Stores</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/menu-footer.css">
+    <link rel="stylesheet" href="../css/localStores.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="top-bar__inner">
+                <div class="top-bar__currency">
+                    <form action="" name="currencyForm" class="top-bar__currency-form">
+                        <label class="top-bar__currency-title">Currency:</label>
+                        <input type="text" name="currency" class="top-bar__currency-input" value="UAH" readonly>
+                        <span><i class="fa fa-angle-down"></i></span>
+                    </form>
+                    <ul class="currency-list">
+                        <li data-currency = "UAH" class="currency-list__item">
+                            UAH
+                        </li>
+                        <li data-currency="USD" class="currency-list__item">
+                            USD
+                        </li>
+                        <li data-currency = "RUB" class="currency-list__item">
+                            RUB
+                        </li>
+                    </ul>
+                </div>
+                <nav class="top-bar__account-info">
+                    <div class="login">
+                        <button type="button" class="login__button">
+                            <i class="fa fa-user-o"></i>
+                        </button>
+                        <ul class="login-list">
+                            <li class="login-list__item">
+                                <a href="/html/SignUp.html" data-sign="up" class="login-list__link">
+                                    Register
+                                </a>
+                            </li>
+                            <li class="login-list__item">
+                                <a href="/html/SignUp.html" data-sign="in" class="login-list__link">
+                                    Sign In
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="cart">
+                        <span class="cart__icon"><i class="fa fa-shopping-cart"></i></span>
+                        <div class="cart__quantity">empty</div>
+                        <span class="cart__icon--arrow"><i class="fa fa-angle-down"></i></span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <nav class="header-menu">
+            <div class="container">
+                <div class="header-menu__inner">
+                    <button type="button" class="menu-button">
+                        
+                    </button>
+                    <button type="button" class="search-button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <a href="/html/Home.html" class="header-menu__logo">
+                        <span>avenue</span> fashion
+                    </a>
+                    <ul class="navigation-list">
+                        <li class="navigation-list__item js-category-button">
+                            <a data-active-page="Mens" href="#" class="navigation-list__link">
+                                mens
+                            </a>
+                            <span class="navigation-list__arrow"><i class="fa fa-angle-down"></i></span>
+                            <div class="navigation-dropdown">
+                                <div class="navigation-dropdown__inner">
+                                    <button type="button" class="navigation-dropdown__back-btn">
+                                        menu
+                                    </button>
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list__title">
+                                            Casual
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Jackets   
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Hoodies & Sweatshirts 
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Polo Shirts
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Sportswear
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Trousers & Chinos
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                T-Shirts
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list__title">
+                                            Formal
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Jackets   
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Shirts
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Suits
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Trousers
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-banner">
+                                    <div class="dropdown-banner__text">
+                                        <span>Autumn sale!</span>
+                                        up to 50% off
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="navigation-list__item js-category-button">
+                            <a data-active-page="Womens" href="#" class="navigation-list__link">
+                                womens
+                            </a>
+                            <span class="navigation-list__arrow"><i class="fa fa-angle-down"></i></span>
+                            <div class="navigation-dropdown">
+                                <div class="navigation-dropdown__inner">
+                                    <button type="button" class="navigation-dropdown__back-btn">
+                                        menu
+                                    </button>
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list__title">
+                                            Casual
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Jackets   
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Hoodies & Sweatshirts 
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Polo Shirts
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Sportswear
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Trousers & Chinos
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                T-Shirts
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list__title">
+                                            Formal
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Jackets   
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Shirts
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Suits
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Trousers
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-banner">
+                                    <div class="dropdown-banner__text">
+                                        <span>Autumn sale!</span>
+                                        up to 50% off
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="navigation-list__item">
+                            <a data-active-page="TheBrand" href="/html/TheBrand.html" class="navigation-list__link">
+                                the brand
+                            </a>
+                        </li>
+                        <li class="navigation-list__item">
+                            <a data-active-page="LocalStores" href="/html/LocalStores.html" class="navigation-list__link">
+                                local stores
+                            </a>
+                        </li>
+                        <li class="navigation-list__item js-category-button">
+                            <a data-active-page="LookBook" href="/html/LookBook.html" class="navigation-list__link">
+                                look book
+                            </a>
+                            <span class="navigation-list__arrow"><i class="fa fa-angle-down"></i></span>
+                            <div class="navigation-dropdown">
+                                <div class="navigation-dropdown__inner">
+                                    <button type="button" class="navigation-dropdown__back-btn">
+                                        menu
+                                    </button>
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list__title">
+                                            our lookbooks
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="/html/LookBook.html" class="dropdown-list__link">
+                                                Latest Posts (mixed)
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Mens Lookbook
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Womens Lookbook
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list__title">
+                                            your lookbook
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Show and Edit   
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Share
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Delete
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-banner">
+                                    <div class="dropdown-banner__text">
+                                        <span>Autumn sale!</span>
+                                        up to 50% off
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <form action="" name="search" class="search-form">
+                        <button type="button" class="search-form__close-btn">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <input type="text" name="search-input" class="search-form__input" placeholder="Search...">
+                        <button type="button" class="search-form__btn">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="intro" style="background-image: url(../images/intro-bg.jpg);">
+            <div class="intro__inner">
+                <span>a</span>
+                <span>v</span>
+                <span>e</span>
+            </div>
+            <div class="intro__content">
+                <div class="intro__title">
+                    <span>local</span> stores
+                </div>
+                <div class="intro__descr">
+                    find a store near you
+                </div>
+            </div>
+        </section>
+        <section class="locations">
+            <div class="container">
+                <div class="locations-inner">
+                    <div class="locations-city">
+                        <div class="city-inner">
+                            <div class="locations-city__title city-title">
+                                London
+                            </div>
+                            <div class="locations-city__subtitle city-subtitle">
+                                180-182 Regent Street, London, W1B 5BT
+                            </div>
+                            <div class="locations-city__text city-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing esi
+                                elit. Vivamus at arcu sem. Vestibulum ornare eleifendit
+                                massa, nec tempor odio. Fusce posuere nunc iaculis ligula
+                                viverra iaculis. Aliquam erat volutpat. 
+                            </div>
+                        </div>
+                        <a href="#" class="locations-city__button">
+                            view details
+                        </a>
+                    </div>
+                    <div class="locations-city">
+                        <div class="city-inner">
+                            <div class="locations-city__title city-title">
+                                new york
+                            </div>
+                            <div class="locations-city__subtitle city-subtitle">
+                                109 Columbus Circle, New York, NY 10023 
+                            </div>
+                            <div class="locations-city__text city-text">
+                                Nunc non posuere nisl. Etiam finibus vel dui nec lobortis.
+                                Aliquam egestas, sem quis condimentum venenatis, erat leo 
+                                fermentum dolor, non sollicitudin massa mi eu nibh. Nullam 
+                                vitae aliquam dui, non sodales nisl. 
+                            </div>
+                        </div>
+                        <a href="#" class="locations-city__button">
+                            view details
+                        </a>
+                    </div>
+                    <div class="locations-city">
+                        <div class="city-inner">
+                            <div class="locations-city__title city-title">
+                                paris
+                            </div>
+                            <div class="locations-city__subtitle city-subtitle">
+                                2133 Rue Saint-Honoré, 75001 Paris 
+                            </div>
+                            <div class="locations-city__text city-text">
+                                Ut interdum fermentum blandit. Donec nec lacus egetit 
+                                mi rhoncus eleifend. Curabitur laoreet nisl eget rutruml auctor. 
+                                Vestibulum ante ipsum primis in faucibus orcip luctus et ultrices 
+                                posuere cubilia curae cras ligula. 
+                            </div>
+                        </div>
+                        <a href="#" class="locations-city__button">
+                            view details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="details">
+            <div class="details-map" style="background-image: url(../images/localStores/map.jpg);">
+                <div class="details-map__marker">
+                    <i class="fa fa-map-marker"></i>
+                </div>
+            </div>
+            <div class="details-content">
+                <div class="details-content__title city-title">
+                    london
+                </div>
+                <div class="details-content__subtitle city-subtitle">
+                    180-182 Regent Street, London, W1B 5BT
+                </div>
+                <div class="details-content__text city-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing esi
+                    elit. Vivamus at arcu sem. Vestibulum ornare eleifendit
+                    massa, nec tempor odio. Fusce posuere nunc iaculis ligula
+                    viverra iaculis. Aliquam erat volutpat. 
+                </div>
+                <ul class="contact-list">
+                    <li class="contact-list__item">
+                        <span><i class="fa fa-map-marker"></i></span>
+                        180-182 Regent Street, London, W1B 5BT
+                    </li>
+                    <li class="contact-list__item">
+                        <a class="contact-list__item-link" href="tel: 0123-456-789">
+                            <span><i class="fa fa-phone"></i></span>
+                            0123-456-789 
+                        </a>
+                    </li>
+                    <li class="contact-list__item">
+                        <a class="contact-list__item-link" href="#">
+                            <span><i class="fa fa-link"></i></span>
+                            www.yourwebsite.com 
+                        </a>
+                    </li>
+                    <li class="contact-list__item">
+                        <a class="contact-list__item-link" href="#">
+                            <span><i class="fa fa-envelope-o"></i></span>
+                            support@yourwebsite.com 
+                        </a>
+                    </li>
+                    <li class="contact-list__item">
+                        <span><i class="fa fa-clock-o"></i></span>
+                        Monday-Friday: 9am to Saturday: 10am to 6pm Sunday: 10am to 2pm
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__info footer-info">
+                <ul class="footer__info-list info-list">
+                    <li class="info-list__title">
+                        Information
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            The brand
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Local Stores
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Customers service
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Pivacy & cookies
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Site map
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__info-list info-list">
+                    <li class="info-list__title">
+                        why buy from us
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Shipping & returns
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Secure shopping
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Testimonials
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Award winning
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Ethical trading
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__info-list info-list">
+                    <li class="info-list__title">
+                        your account
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Sign in
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Register
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            View cart
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            View your lookbook
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Track an order
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Update information
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__info-list info-list">
+                    <li class="info-list__title">
+                        lookbook
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Latest posts
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Men's lookbook
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Women's lookbook
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Lookbooks RSS feed
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            View your lookbook
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Delete your lookbook
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__info-list info-list">
+                    <li class="info-list__title">
+                        contact details
+                    </li>
+                    <li class="info-list__item">
+                        Head Office: Avenue Fashion
+                        80-182 Regent Street, London.
+                    </li>
+                    <li class="info-list__item">
+                        Telephone:
+                        <a href="tel:0123-456-789" class="info-list__link">
+                            0123-456-789
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        Email:
+                        <a href="mailto:support@yourwebsite.com" class="info-list__link">
+                            support@yourwebsite.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__banners">
+                <div class="footer__banner banner banner--bg-black">
+                    <div class="banner__content">
+                        <div class="banner__text">
+                            <span>award winner</span>
+                            fashion awards 2020
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__banner banner banner--bg-blue">
+                    <div class="banner__content">
+                        <a href="#" class="banner__link">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="banner__link">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="banner__link">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#" class="banner__link">
+                            <i class="fa fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="footer-copyright__inner">
+                <span class="footer-copyright__brand-name">
+                    <i class="fa fa-copyright" aria-hidden="true"></i>
+                    Avenue Fashion<sup><i class="fa fa-trademark"></i></sup>
+                </span>
+                <span class="footer-copyright__dev">
+                    Dev by
+                    <a href="#" class="footer-copyright__dev-link">
+                        ValdemarDev.com
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/menu-footer.js"></script>
+</body>
+</html>

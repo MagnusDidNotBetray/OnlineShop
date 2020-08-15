@@ -1,0 +1,121 @@
+.sort-by{
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 125px;
+
+    &__menu{
+        height: 100%;
+        display: flex;
+        text-align: left;
+    }
+
+    &__item{
+        text-transform: uppercase;
+        font-size: .8125rem;
+        font-weight: 400;
+        color: #727272;
+        margin-right: 55px;
+        cursor: pointer;
+    }
+
+    &__sort-btn{
+        position: relative;
+        display: none;
+        min-width: 115px;
+        font-size: 1rem;
+        color: #727272;
+        border: none;
+        background-color: #ffffff;
+        text-transform: uppercase;
+        cursor: pointer;
+        span{
+            position: absolute;
+            top: -1px; right: 0;
+            font-size: 0.875rem;
+        }
+    }
+
+    .selected-link{
+        display: none;
+    }
+
+    .active{
+        color: #70c7c7;
+    }
+}
+@media (max-width: 890px){
+    .sort-by{
+        &__item{
+            margin-right: 20px;
+        }
+    }
+}
+@media (max-width: 690px){
+    .sort-by{
+        justify-content: flex-end;
+        &__menu{
+            display: none;
+            position: absolute;
+            z-index: 10;
+            top: 90%; right: 0;
+            flex-direction: column;
+            width: 55%;
+            min-width: 220px;
+            height: auto;
+            border: 1px solid #ededed;
+            font-size: 1.125rem;
+            &--active{
+                display: flex;
+            }
+        }
+        &__sort-btn{
+            display: block;
+            &--active{
+                span{
+                    bottom: -2px; top: auto;
+                }
+                i{
+                    transform: rotateX(180deg);
+                }
+            }
+        }
+        &__item{
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 0 15px 0 25px;
+            transition: .3;
+            &:not(:first-child){
+                border-top: 1px solid #ededed;
+            }
+            &:hover{
+                background-color: #ededed;
+            }
+        }
+        .selected-link{
+            display: block;
+            opacity: 0;
+        }
+        .active{
+            color: #727272;
+            background-color: #ededed;
+            .selected-link{
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+}
+@media (max-width: 550px){
+    .sort-by{
+        min-height: 87px;
+    }
+}

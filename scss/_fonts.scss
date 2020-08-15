@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: local('Proxima Nova Light'), local('Proxima-Nova-Light'),
+        url('/brand-store/fonts/ProximaNova-Light.woff2') format('woff2'),
+        url('/brand-store/fonts/ProximaNova-Light.woff') format('woff'),
+        url('/brand-store/fonts/ProximaNova-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Proxima Nova';
+    src: local('Proxima Nova Bold'), local('Proxima-Nova-Bold'),
+        url('/brand-store/fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('/brand-store/fonts/ProximaNova-Bold.woff') format('woff'),
+        url('/brand-store/fonts/ProximaNova-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  $Montserrat: 'Montserrat', sans-serif;
+  $Roboto : 'Roboto', sans-serif;
+  $Proxima: 'Proxima Nova', sans-serif;

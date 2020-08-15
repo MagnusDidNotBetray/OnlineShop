@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product View</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/menu-footer.css">
+    <link rel="stylesheet" href="../css/productView.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="top-bar__inner">
+                <div class="top-bar__currency">
+                    <form action="" name="currencyForm" class="top-bar__currency-form">
+                        <label class="top-bar__currency-title">Currency:</label>
+                        <input type="text" name="currency" class="top-bar__currency-input" value="UAH" readonly>
+                        <span><i class="fa fa-angle-down"></i></span>
+                    </form>
+                    <ul class="currency-list">
+                        <li data-currency = "UAH" class="currency-list__item">
+                            UAH
+                        </li>
+                        <li data-currency="USD" class="currency-list__item">
+                            USD
+                        </li>
+                        <li data-currency = "RUB" class="currency-list__item">
+                            RUB
+                        </li>
+                    </ul>
+                </div>
+                <nav class="top-bar__account-info">
+                    <div class="login">
+                        <button type="button" class="login__button">
+                            <i class="fa fa-user-o"></i>
+                        </button>
+                        <ul class="login-list">
+                            <li class="login-list__item">
+                                <a href="/html/SignUp.html" data-sign="up" class="login-list__link">
+                                    Register
+                                </a>
+                            </li>
+                            <li class="login-list__item">
+                                <a href="/html/SignUp.html" data-sign="in" class="login-list__link">
+                                    Sign In
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="cart">
+                        <span class="cart__icon"><i class="fa fa-shopping-cart"></i></span>
+                        <div class="cart__quantity">empty</div>
+                        <span class="cart__icon--arrow"><i class="fa fa-angle-down"></i></span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <nav class="header-menu">
+            <div class="container">
+                <div class="header-menu__inner">
+                    <button type="button" class="menu-button">
+                        
+                    </button>
+                    <button type="button" class="search-button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <a href="/html/Home.html" class="header-menu__logo">
+                        <span>avenue</span> fashion
+                    </a>
+                    <ul class="navigation-list">
+                        <li class="navigation-list__item js-category-button">
+                            <a data-active-page="Mens" href="#" class="navigation-list__link">
+                                mens
+                            </a>
+                            <span class="navigation-list__arrow"><i class="fa fa-angle-down"></i></span>
+                            <div class="navigation-dropdown">
+                                <div class="navigation-dropdown__inner">
+                                    <button type="button" class="navigation-dropdown__back-btn">
+                                        menu
+                                    </button>
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list__title">
+                                            Casual
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Jackets   
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Hoodies & Sweatshirts 
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Polo Shirts
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Sportswear
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Trousers & Chinos
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                T-Shirts
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list__title">
+                                            Formal
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Jackets   
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Shirts
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Suits
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Trousers
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-banner">
+                                    <div class="dropdown-banner__text">
+                                        <span>Autumn sale!</span>
+                                        up to 50% off
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="navigation-list__item js-category-button">
+                            <a data-active-page="Womens" href="#" class="navigation-list__link">
+                                womens
+                            </a>
+                            <span class="navigation-list__arrow"><i class="fa fa-angle-down"></i></span>
+                            <div class="navigation-dropdown">
+                                <div class="navigation-dropdown__inner">
+                                    <button type="button" class="navigation-dropdown__back-btn">
+                                        menu
+                                    </button>
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list__title">
+                                            Casual
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Jackets   
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Hoodies & Sweatshirts 
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Polo Shirts
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Sportswear
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Trousers & Chinos
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                T-Shirts
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list__title">
+                                            Formal
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Jackets   
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Shirts
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Suits
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Trousers
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-banner">
+                                    <div class="dropdown-banner__text">
+                                        <span>Autumn sale!</span>
+                                        up to 50% off
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="navigation-list__item">
+                            <a data-active-page="TheBrand" href="/html/TheBrand.html" class="navigation-list__link">
+                                the brand
+                            </a>
+                        </li>
+                        <li class="navigation-list__item">
+                            <a data-active-page="LocalStores" href="/html/LocalStores.html" class="navigation-list__link">
+                                local stores
+                            </a>
+                        </li>
+                        <li class="navigation-list__item js-category-button">
+                            <a data-active-page="LookBook" href="/html/LookBook.html" class="navigation-list__link">
+                                look book
+                            </a>
+                            <span class="navigation-list__arrow"><i class="fa fa-angle-down"></i></span>
+                            <div class="navigation-dropdown">
+                                <div class="navigation-dropdown__inner">
+                                    <button type="button" class="navigation-dropdown__back-btn">
+                                        menu
+                                    </button>
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list__title">
+                                            our lookbooks
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="/html/LookBook.html" class="dropdown-list__link">
+                                                Latest Posts (mixed)
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Mens Lookbook
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Womens Lookbook
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="dropdown-list">
+                                        <li class="dropdown-list__title">
+                                            your lookbook
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Show and Edit   
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Share
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-list__item">
+                                            <a href="#" class="dropdown-list__link">
+                                                Delete
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-banner">
+                                    <div class="dropdown-banner__text">
+                                        <span>Autumn sale!</span>
+                                        up to 50% off
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <form action="" name="search" class="search-form">
+                        <button type="button" class="search-form__close-btn">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <input type="text" name="search-input" class="search-form__input" placeholder="Search...">
+                        <button type="button" class="search-form__btn">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="intro" style="background-image: url(../images/intro-bg.jpg);">
+            <div class="intro__inner">
+                <span>a</span>
+                <span>v</span>
+                <span>e</span>
+            </div>
+            <div class="intro__content">
+                <div class="intro__title">
+                    <span>PRODUCT</span> VIEW
+                </div>
+                <div class="intro__descr">
+                    Mens - Casuals - HOODIES & SWEATSHIRTS - <span> AVE CLASSIC SWEATSHIRT </span>
+                </div>
+            </div>
+        </section>
+        <section class="product-page">
+            <div class="product-page__inner">
+                <div class="product-page__main-content">
+                    <div class="product-slider product-page__product-slider">
+                        <div class="product-slider__grid">
+                            <div class="product-slider__item">
+                                <img src="../images/productView/product-slider-image.jpg" alt="" class="product-slider__img">
+                            </div>
+                            <div class="product-slider__item">
+                                <img src="../images/home-images/items-small-photo-1.png" alt="" class="product-slider__img">
+                            </div>
+                            <div class="product-slider__item">
+                                <img src="../images/home-images/items-small-photo-4.png" alt="" class="product-slider__img">
+                            </div>
+                            <div class="product-slider__item">
+                                <img src="../images/productView/product-slider-image.jpg" alt="" class="product-slider__img">
+                            </div>
+                            <div class="product-slider__item">
+                                <img src="../images/home-images/items-small-photo-1.png" alt="" class="product-slider__img">
+                            </div>
+                            <div class="product-slider__item">
+                                <img src="../images/home-images/items-small-photo-4.png" alt="" class="product-slider__img">
+                            </div>
+                        </div>
+                        <button type="button" class="product-slider__arrow product-slider__arrow--prev">
+                            <i class="fa fa-angle-left"></i>
+                        </button>
+                        <button type="button" class="product-slider__arrow product-slider__arrow--next">
+                            <i class="fa fa-angle-right"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h1 class="product-info__title">
+                            ave classic sweatshirts
+                        </h1>
+                        <ul class="product-info__review-list review-list">
+                            <li class="review-list__item">
+                                <span class="review-list__rating">
+                                    <svg class="review-list__icon" xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill="#ded3aa" fill-rule="evenodd" clip-rule="evenodd">
+                                        <path d="M320.012 15.662l88.076 215.246L640 248.153 462.525 398.438l55.265 225.9-197.778-122.363-197.778 122.363 55.264-225.9L0 248.153l231.936-17.245z"/>
+                                    </svg>
+                                    <svg class="review-list__icon" xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill="#ded3aa" fill-rule="evenodd" clip-rule="evenodd">
+                                        <path d="M320.012 15.662l88.076 215.246L640 248.153 462.525 398.438l55.265 225.9-197.778-122.363-197.778 122.363 55.264-225.9L0 248.153l231.936-17.245z"/>
+                                    </svg>
+                                    <svg class="review-list__icon" xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill="#ded3aa" fill-rule="evenodd" clip-rule="evenodd">
+                                        <path d="M320.012 15.662l88.076 215.246L640 248.153 462.525 398.438l55.265 225.9-197.778-122.363-197.778 122.363 55.264-225.9L0 248.153l231.936-17.245z"/>
+                                    </svg>
+                                    <svg class="review-list__icon" xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill="#ded3aa" fill-rule="evenodd" clip-rule="evenodd">
+                                        <path d="M320.012 15.662l88.076 215.246L640 248.153 462.525 398.438l55.265 225.9-197.778-122.363-197.778 122.363 55.264-225.9L0 248.153l231.936-17.245z"/>
+                                    </svg>
+                                    <svg class="review-list__icon" xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill="#dfdfde" fill-rule="evenodd" clip-rule="evenodd">
+                                        <path d="M320.012 15.662l88.076 215.246L640 248.153 462.525 398.438l55.265 225.9-197.778-122.363-197.778 122.363 55.264-225.9L0 248.153l231.936-17.245z"/>
+                                    </svg>
+                                </span>
+                                <a href="#" class="review-list__link">
+                                    <span class="review-list__summary-reviews">
+                                        3 Review(s)
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="review-list__item">
+                                <a href="#" class="review-list__link">
+                                    Add a Review
+                                </a>
+                            </li>
+                            <li class="review-list__item">
+                                <ul class="share-list review-list__share-list">
+                                    <li class="share-list__item">
+                                        Share:
+                                    </li>
+                                    <li class="share-list__item">
+                                        <a href="#" class="share-list__link">
+                                            <i class=" fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="share-list__item">
+                                        <a href="#" class="share-list__link">
+                                            <i class=" fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="share-list__item">
+                                        <a href="#" class="share-list__link">
+                                            <i class=" fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li class="share-list__item">
+                                        <a href="#" class="share-list__link">
+                                            <i class=" fa fa-pinterest-p"></i>
+                                        </a>
+                                    </li>
+                                    <li class="share-list__item">
+                                        <a href="#" class="share-list__link">
+                                            <i class=" fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="share-list__item">
+                                        <a href="#" class="share-list__link">
+                                            <i class=" fa fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="product-info__price-box">
+                            <span class="product-info__price">
+                                <sup>£</sup><span class="product-info__old-price">107</span>
+                            </span>
+                            <span class="product-info__sale">
+                                <sup>£</sup>89.99
+                            </span>
+                        </div>
+                        <ul class="product-info__details-list">
+                            <li class="product-info__details-li">
+                                <span class="product-info__details-key">
+                                    availability:
+                                </span>
+                                <span class="product-info__details-value">
+                                    In stock
+                                </span>
+                            </li>
+                            <li class="product-info__details-li">
+                                <span class="product-info__details-key">
+                                    product code:
+                                </span>
+                                <span class="product-info__details-value">
+                                    #499577
+                                </span>
+                            </li>
+                            <li class="product-info__details-li">
+                                <span class="product-info__details-key">
+                                    Tags:
+                                </span>
+                                <span class="product-info__details-value">
+                                    <a href="#" class="product-info__details-tag">Classic,</a>
+                                    <a href="#" class="product-info__details-tag">Casual,</a>
+                                    <a href="#" class="product-info__details-tag">V-neck,</a>
+                                    <a href="#" class="product-info__details-tag">Loose</a>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="product-info__descr">
+                            <p class="product-info__descr-text">
+                                Donec sem lorem laoreet tempor un risus vitae, rutrum sodales nibh suspendisse est congue metus nunc, 
+                                id viverra elit loreti rhoncus quis consecteur es. Donec pulvinar tempor lorem a pretium justo interdum.
+                            </p>
+                            <ul class="product-info__descr-list">
+                                <li class="product-info__descr-li">
+                                    Elasticated cuffs
+                                </li>
+                                <li class="product-info__descr-li">
+                                    Casual fit
+                                </li>
+                                <li class="product-info__descr-li">
+                                    100% Cotton
+                                </li>
+                                <li class="product-info__descr-li">
+                                    Free shipping with 4 days delivery
+                                </li>
+                            </ul>
+                        </div>
+                        <form action="" class="form-order product-info__form-order">
+                            <div class="form-order__select-box">
+                                <div class="select select--mobile-width--100-percent color-js form-order__select">
+                                    <label class="select__title select-title">colour</label>
+                                    <div class="select__input-wrapper">
+                                        <input class="select__input" type="text" value="Select Color" readonly>
+                                        <span class="select__icon"><i class="fa fa-angle-down"></i></span>
+                                    </div>
+                                    <ul class="select-list">
+                                        <li class="select-list__item" data-select="Fire Opal">
+                                            <button type="button" class="select-list__button">
+                                                <div class="select-list__item-color" style="background-color: #555555;">
+                                                </div>
+                                                <div class="select-list__item-name">
+                                                    Fire Opal
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="select-list__item" data-select="Lasalle Red">
+                                            <button type="button" class="select-list__button">
+                                                <div class="select-list__item-color" style="background-color: #9c2b2b;">
+                            
+                                                </div>
+                                                <div class="select-list__item-name">
+                                                    Lasalle Red
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="select-list__item" data-select="True Black">
+                                            <button type="button" class="select-list__button">
+                                                <div class="select-list__item-color" style="background-color: #000000;">
+                            
+                                                </div>
+                                                <div class="select-list__item-name">
+                                                    True Black
+                                                </div>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="select select--mobile-width--63-percent size-js form-order__select">
+                                    <label class="select__title select-title">size</label>
+                                    <div class="select__input-wrapper">
+                                        <input class="select__input" type="text" value="Select Size" readonly>
+                                        <span class="select__icon"><i class="fa fa-angle-down"></i></span>
+                                    </div>
+                                    <ul class="select-list">
+                                        <li class="select-list__item" data-select="XS">
+                                            <button type="button" class="select-list__button">
+                                                <div class="select-list__item-name">
+                                                    XS
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="select-list__item" data-select="S">
+                                            <button type="button" class="select-list__button">
+                                                <div class="select-list__item-name">
+                                                    S
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="select-list__item" data-select="M">
+                                            <button type="button" class="select-list__button">
+                                                <div class="select-list__item-name">
+                                                    M
+                                                </div>
+                                            </button> 
+                                        </li>
+                                        <li class="select-list__item" data-select="L">
+                                            <button type="button" class="select-list__button">
+                                                <div class="select-list__item-name">
+                                                    L
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="select-list__item" data-select="XL">
+                                            <button type="button" class="select-list__button">
+                                                <div class="select-list__item-name">
+                                                    XL
+                                                </div>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="select-qty custom-input-js">
+                                    <label class="select-qty__title select-title">qty</label>
+                                    <div class="select-qty__input-wrapper">
+                                        <input class="select-qty__input" type="text" value="1" readonly>
+                                        <button type="button" class="select-qty__arrow select-qty__arrow--up arrow-up-js">
+                                            <i class="fa fa-angle-up"></i>
+                                        </button>
+                                        <button type="button" class="select-qty__arrow select-qty__arrow--down arrow-down-js">
+                                            <i class="fa fa-angle-down"></i>
+                                        </button>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="form-order__button-box">
+                                <button type="button" class="form-order__button">
+                                    <span class="form-order__button-icon">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </span>
+                                    Add to cart
+                                </button>
+                                <button type="button" class="form-order__button form-order__button-lookbook">
+                                    <span class="form-order__button-icon">
+                                        <i class="fa fa-heart-o"></i>
+                                    </span>
+                                    Add to lookbook
+                                </button>
+                            </div>
+                            <button type="button" class="form-order__button-compare">
+                                <div class="form-order__compare-icon">
+                                    <i class=" fa fa-compress"></i>
+                                </div>
+                                Add to compare
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="product-page__data">
+                    <div class="data-menu">
+                        <button type="button" data-type="descr" class="data-menu__button data-menu__button--active">
+                            description
+                        </button>
+                        <button type="button" data-type="video" class="data-menu__button">
+                            video
+                        </button>
+                        <button type="button" data-type="size" class="data-menu__button">
+                            size & spects
+                        </button>
+                        <button type="button" data-type="delivery" class="data-menu__button">
+                            delivery & return
+                        </button>
+                        <button type="button" data-type="review" class="data-menu__button">
+                            review
+                        </button>
+                    </div>
+                    <div class="data-content">
+                        <div data-type="descr" class="data-content__item data-content__item--active">
+                            <h3 class="data-content__item-title">
+                                Nunc egestas posuere enim, eu maximus erat posuere eget
+                            </h3>
+                            <p class="data-content__item-text">
+                                Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis. Nulla sapien magna, interdum quis pretium nec, pharetra at felis.
+                                Curabitur dictum sapien est, eget ultricies turpis porta vel. Nam suscipit nec lacus sed imperdiet. Vestibulum a purus risus.
+                                Nulla et dictum augue, nec efficitur mi. Nam sit amet pretium elit. Aliquam congue, ligula id vehicula vestibulum, orci ex vulputate lacus,
+                                ac malesuada elit dolor eget ex. Sed quis aliquet risus, ut cursus lectus. In eget lorem tellus.
+                            </p>
+                            <p class="data-content__item-text">
+                                Quisque eleifend varius nisi nec sagittis. Nulla ullamcorper imperdiet justo, ut venenatis purus lobortis ut. Nunc sagittis urna et hendrerit sodales. 
+                                Nunc molestie risus nec fringilla lacinia. Nulla facilisi. Etiam neque velit, tristique eget sollicitudin eget, placerat at metus.
+                                Proin dictum lobortis velit, id suscipit orci faucibus ut. Aliquam erat volutpat. Vivamus feugiat justo in diam placerat, id dignissim elit auctor.
+                                Vestibulum scelerisque sem et lobortis ultricies. Morbi suscipit nulla urna. Suspendisse potenti. Nullam varius quam sed nisl dignissim, vel faucibus ipsum blandit. 
+                                Vivamus at suscipit augue. Nam finibus gravida lorem eu viverra. Praesent rhoncus imperdiet ultricies. Nullam pretium cursus augue auctor vulputate. 
+                                Quisque a convallis diam commodo eget diam id, eleifend dictum libero. 
+                                Etiam varius, nisi vel dignissim sodales, enim dui posuere mauris, in aliquet lorem eros eget neque.
+                            </p>
+                        </div>
+                        <div data-type="video" class="data-content__item">
+
+                        </div>
+                        <div data-type="size" class="data-content__item">
+
+                        </div>
+                        <div data-type="delivery" class="data-content__item">
+
+                        </div>
+                        <div data-type="review" class="data-content__item">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__info footer-info">
+                <ul class="footer__info-list info-list">
+                    <li class="info-list__title">
+                        Information
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            The brand
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Local Stores
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Customers service
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Pivacy & cookies
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Site map
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__info-list info-list">
+                    <li class="info-list__title">
+                        why buy from us
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Shipping & returns
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Secure shopping
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Testimonials
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Award winning
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Ethical trading
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__info-list info-list">
+                    <li class="info-list__title">
+                        your account
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Sign in
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Register
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            View cart
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            View your lookbook
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Track an order
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Update information
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__info-list info-list">
+                    <li class="info-list__title">
+                        lookbook
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Latest posts
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Men's lookbook
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Women's lookbook
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Lookbooks RSS feed
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            View your lookbook
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        <a href="#" class="info-list__link">
+                            Delete your lookbook
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__info-list info-list">
+                    <li class="info-list__title">
+                        contact details
+                    </li>
+                    <li class="info-list__item">
+                        Head Office: Avenue Fashion
+                        80-182 Regent Street, London.
+                    </li>
+                    <li class="info-list__item">
+                        Telephone:
+                        <a href="tel:0123-456-789" class="info-list__link">
+                            0123-456-789
+                        </a>
+                    </li>
+                    <li class="info-list__item">
+                        Email:
+                        <a href="mailto:support@yourwebsite.com" class="info-list__link">
+                            support@yourwebsite.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__banners">
+                <div class="footer__banner banner banner--bg-black">
+                    <div class="banner__content">
+                        <div class="banner__text">
+                            <span>award winner</span>
+                            fashion awards 2020
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__banner banner banner--bg-blue">
+                    <div class="banner__content">
+                        <a href="#" class="banner__link">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="banner__link">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="banner__link">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#" class="banner__link">
+                            <i class="fa fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="footer-copyright__inner">
+                <span class="footer-copyright__brand-name">
+                    <i class="fa fa-copyright" aria-hidden="true"></i>
+                    Avenue Fashion<sup><i class="fa fa-trademark"></i></sup>
+                </span>
+                <span class="footer-copyright__dev">
+                    Dev by
+                    <a href="#" class="footer-copyright__dev-link">
+                        ValdemarDev.com
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/menu-footer.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/productView.js"></script>
+</body>
+</html>

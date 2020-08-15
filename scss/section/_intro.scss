@@ -1,0 +1,101 @@
+.intro{
+    position: relative;
+    width: 100%;
+    padding-bottom: 22%;
+    margin-bottom: 60px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        background-color: rgba($color: #333333, $alpha: .75);
+    }
+    &__inner{
+        position: absolute;
+        top: 0; left: calc(50% - 38.05vw);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 76.1vw;
+        max-width: 1560px;
+        font-size: 21.95vw;
+        font-weight: 700;
+        color: rgba($color: #f8f8f8, $alpha: .05);
+        text-transform: uppercase;
+    }
+    &__content{
+        position: absolute;
+        top: 0; left: calc(50% - 38.05vw);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 76.1vw;
+        max-width: 1560px;
+        height: 100%;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: #ffffff;
+        text-align: center;
+    }
+    &__title{
+        font-size: 3em;
+        font-weight: 300;
+        margin-bottom: 30px;
+        span{
+            font-weight: 700;
+        }
+    }
+    &__descr{
+        font-size: 1.875em;
+        font-weight: 400;
+    }
+}
+@media (max-width: 1200px){
+    .intro__content{
+        font-size: .8rem;
+    }
+}
+@media (max-width: 910px){
+    .intro{
+        padding-bottom: 30%;
+        &__inner{
+            left: calc(50% - 42.5vw);
+            width: 85vw;
+            font-size: 30.5vw;
+        }
+    }
+}
+@media (max-width: 678px){
+    .intro{
+        &__content{
+            font-size: .6rem;
+        }
+    }
+}
+@media (max-width: 500px){
+    .intro{
+        padding-bottom: 36%;
+        &__inner{
+            left: calc(50% - 47.5vw);
+            width: 95vw;
+            font-size: 36.5vw;
+        }
+        &-content{
+            width: 95vw;
+        }
+        &__title{
+            margin-bottom: 15px;
+            font-size: 2.5em;
+        }
+    }
+}
+@media (max-width: 412px){
+    .intro__content{
+        font-size: .5rem;
+    }
+}
