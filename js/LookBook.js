@@ -23,6 +23,48 @@ function toggleBannerModalWindow(event, banner, wrapper, bannerClass, wrapperCla
     }
 }
 
+function lookbookGrid(){
+    const grid = document.querySelector('.lookbook-content');
+    const banner = grid.querySelector('.lookbook-content__banner-win');
+    const items = grid.querySelectorAll('.lookbook-content__item');
+    const offsetArr = [...items].map(elem => elem.offsetLeft);
+    const maxOffsetLeft = Math.max.apply(null, offsetArr);
+    const minOffsetLeft = Math.min.apply(null, offsetArr);
+    [items[0], items[1]].forEach(elem => elem.classList.add('lookbook-content__item--order--2-'));
+    items[items.length - 1].classList.add('lookbook-content__item--order--2');
+    const mutationCallback = () => {
+        const lastItem = grid.querySelector('.lookbook-content__item--order--2');
+        if (banner.offsetWidth < grid.offsetWidth && lastItem){
+            const items = grid.querySelectorAll('.lookbook-content__item');
+            if ((items[items.length - 1].offsetLeft < maxOffsetLeft && lastItem.offsetLeft === maxOffsetLeft) ||
+                (items[items.length - 2].offsetLeft < maxOffsetLeft && lastItem.offsetLeft === maxOffsetLeft)){
+                lastItem.classList.remove('lookbook-content__item--order--2');
+            }
+        }
+        else if (banner.offsetWidth < grid.offsetWidth){
+            const items = grid.querySelectorAll('.lookbook-content__item');
+            if (items[items.length - 1].offsetLeft === minOffsetLeft){
+                items[items.length - 1].classList.add('lookbook-content__item--order--2');
+            }
+        }
+    };
+    const observer = new MutationObserver(mutationCallback);
+    observer.observe(grid, {attributes: false, childList: true, subtree: false});
+    mutationCallback();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', event => {bannerModalWindow(event);}, false);
+    window.addEventListener('resize', () => {
+        console.log('ok');
+        if (!window.matchMedia("(max-width: 966px)").matches && document.querySelector('.banner-win__text-wrapper--active')){
+            document.querySelector('.banner-win__text-wrapper--active').classList.remove('banner-win__text-wrapper--active');
+            document.querySelector('.lookbook-content__banner-win').removeAttribute("style");
+        }
+        if (!window.matchMedia("(max-width: 768px)").matches && document.querySelector('.banner-janes__text-wrapper--active')){
+            document.querySelector('.banner-janes__text-wrapper--active').classList.remove('banner-janes__text-wrapper--active');
+            document.querySelector('.lookbook-content__banner-janes').removeAttribute("style");
+        }
+    });
+    lookbookGrid();
 });

@@ -75,6 +75,10 @@ html{
             @extend %roboto-reg;
             font-size: $px15;
             color: #8e8c8c;
+            &--max-height--105px{
+                max-height: 105px;
+                overflow-y: auto;
+            }
             span{
                 color: #00c8c8;
             }
@@ -157,6 +161,10 @@ html{
                 &--padding-top--2x{
                     padding-top: 30px;
                 }
+            }
+            &__text--max-height--105px{
+                max-height: unset;
+                overflow-y: visible;
             }
             &__awards{
                 position: static;

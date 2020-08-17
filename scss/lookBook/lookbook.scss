@@ -20,16 +20,18 @@ body{
 }
 .lookbook-content{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
     &__banner-janes{
         box-sizing: border-box;
         position: relative;
+        grid-column: 3 / 5;
+        order: -1;
         max-width: 870px;
-        width: 49%;
-        padding: 14.6% 0;
-        margin-bottom: 30px;
+        //width: 49%;
+        padding: 29.2% 0;
+        //margin-bottom: 30px;
         background-color: #e2e3e5;
     }
     &__img-janes{
@@ -60,15 +62,20 @@ body{
     }
 
     &__banner-text{
+        max-height: 60%;
+        overflow-y: auto;
         margin-bottom: 30px;
     }
     &__banner-win{
         box-sizing: border-box;
         position: relative;
         max-width: 1325px;
-        width: 75%;
-        padding: 14.6% 0;
-        margin-bottom: 30px;
+        //width: 75%;
+        //padding: 14.6% 0;
+        grid-column: 1 / 4;
+        order: 1;
+        padding: 19.15% 0;
+        //margin-bottom: 30px;
         background: linear-gradient(#efefed, #f6f6f6);
         .lookbook-content__banner-text{
             max-width: 500px;
@@ -99,15 +106,22 @@ body{
     &__item{
         box-sizing: border-box;
         position: relative;
-        width: 23.5%;
-        padding: 14.6% 0;
+        //width: 23.5%;
+        //padding: 14.6% 0;
+        padding: 61.596% 0;
         min-width: 139px;
         min-height: 185.33px;
-        margin-bottom: 30px;
+        //margin-bottom: 30px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         transition: .3s;
+        &--order--2-{
+            order: -2;
+        }
+        &--order--2{
+            order: 2;
+        }
         &:hover{
             box-shadow: 0 0 24px rgba($color: #000000, $alpha: 0.24);
             .lookbook-content__item-inner{
@@ -143,5 +157,9 @@ body{
             }
         }
     }
+}
+.banner-janes__text-wrapper,
+.banner-win__text-wrapper{
+    height: 68%;
 }
 @import "_mediaLookbook";

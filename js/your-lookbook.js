@@ -11,7 +11,16 @@ function toggleLookbookModalWindow(event){
         lookbookTextWrapperActive.closest('.your-lookbook').removeAttribute('style');
     }
 }
-document.addEventListener('click', () => {
-    if (window.matchMedia('(max-width: 655px)').matches)
-        toggleLookbookModalWindow(event);
-}, false);
+document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 655px)').matches)
+            toggleLookbookModalWindow(event);
+    });
+    window.addEventListener('resize', () => {
+        const wrapper = document.querySelector('.your-lookbook__text-wrapper--active');
+        if (!window.matchMedia('(max-width: 655px)').matches && wrapper){
+            wrapper.classList.remove('your-lookbook__text-wrapper--active');
+            wrapper.closest('.your-lookbook').removeAttribute('style');
+        }
+    });
+});
